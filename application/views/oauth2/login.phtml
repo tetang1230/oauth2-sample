@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<title>HIGO</title>
+</head>
+<body>
+
+<form action="/Oauth2/check" method="post">
+<div>登陆到HIGO</div>
+<div>
+<?php
+if (strlen($error_msg)) {
+    echo $error_msg;
+}
+?>
+</div>
+<div>
+    <input name="account_mobile" value="" type="tel" placeholder="手机号" required  pattern="1[0-9]{10}"/>
+</div>
+<div>
+    <input name="account_password" type="password" value="" placeholder="密码" required pattern="(\w){6,}" />
+</div>
+<div>
+    <input type="submit" />
+</div>
+<form>
+
+</body>
+</html>
